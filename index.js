@@ -6,7 +6,7 @@ const db = require("./db");
 const bodyParser = require("body-parser");
 app.use(bodyParser.json());
 const courseItem = require('./models/courseItem')
-const PORT = process.env.PORT || 3400;
+const PORT = process.env.PORT || 3000;
 app.get("/", (req, resp) => {
   resp.send('Welcome to School management System');
 });
@@ -20,7 +20,7 @@ const courseRoutes = require('./routes/courseRoutes');
 app.use('/courseItem', courseRoutes);
 
 app.listen(PORT, ()=>{
-  console.log('Listening on port 3400');
+  console.log('Listening on port 3000');
 })
 
 ///////////////////////////////////////////////////////////////

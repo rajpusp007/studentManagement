@@ -5,13 +5,13 @@ dns.setServers(["8.8.8.8", "8.8.4.4"]);
 //Define the MongoDB connection URL
 //const mongoURL = 'mongodb://localhost:27017/college';
 
-// const mongoURL = 'mongodb+srv://pusprajtws_db_user:shree200323@cluster0.ibgc0pc.mongodb.net/college';
-//const mongoURL = process.env.MONGODB_URL_LOCAL;
-//console.log("ENV VALUE:", process.env.MONGODB_URL);
+ //const mongoURL = 'mongodb+srv://pusprajtws_db_user:Chhoti281219@cluster0.ibgc0pc.mongodb.net/college';
+const mongoURL = process.env.MONGODB_URL_LOCAL;
+console.log("ENV VALUE:", process.env.MONGODB_URL);
 const connectDB = async () => {
   try {
-    //const mongoURL = process.env.MONGODB_URL;
-    const mongoURL = process.env.MONGODB_URL_LOCAL;
+    const mongoURL = process.env.MONGODB_URL;
+    //const mongoURL = process.env.MONGODB_URL_LOCAL;
     if (!mongoURL) {
       throw new Error("MONGODB_URL is missing in .env");
     }
